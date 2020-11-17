@@ -1,0 +1,105 @@
+<style media="screen" type="text/css">
+  div {
+    width: 60em;
+    font-size: large;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+  }
+
+  h3 {
+    font-size: 40pt;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  p {
+    font-size: large;
+    text-align: justify;
+  }
+
+  body {
+    color: white;
+    background-color: black;
+    margin-left: .5em;
+    margin-right: .5em;
+    margin-top: 3em;
+    font-size: 24pt;
+  }
+
+</style>
+
+
+
+<html>
+
+  <body>
+    <div class="sound" style="width: auto; height: auto; z-index: 0">
+    <!-- only tested on wav and mp3 formats, ogg likely to work as well
+    src has to be a url, cannot be a file on your computer   -->
+    <audio autoplay>
+      <source src="https://github.com/anthonyyacovone/PM_audio_files/blob/master/PM_master_practice_pSounds.mp3?raw=true" type="audio/mpeg">
+    </audio>
+  </div> 
+
+    <div id = "myDIV" style="margin: 0 auto; text-align: justify; border:1px solid white; background-color:black">
+
+      <h3><u>Listen for the letter 'P' sounds!</u></h3>
+
+
+      <form id="intro" onSubmit="return false;">
+        <p>The story will begin shortly, so please turn up your volume!</p><br><br><br>
+        <input type="button" id="button" value="Press 'Space' to indicate a 'P' sound!" style="font-size: large;">
+
+        <br>
+        <p id="CountLine">Number of P's found: 0</p>
+        <br>
+        
+        <p style ="text-align: left;"> When this short snippet is finished, type the last word of the intro and hit 'Enter': <input style="font-size: large" type = "text">
+
+        <form id="phonemeMonitorIntro">
+          <input id="datatosend" type="hidden" name="datatosend">
+        </form>
+
+      </form>
+          
+    </div>
+
+
+    <script>
+      var presses_intro = 0;
+      var correctKey = "13"
+      var start = performance.now()
+      var list = ""
+                
+      document.getElementById("button").focus();
+      document.addEventListener('keyup', logKey);
+
+      function logKey(e) {
+        var keycode = (e.keyCode ? e.keyCode : e.which);
+      
+        if (keycode == "32") {
+  
+      presses_intro = presses_intro + 1
+      RT = performance.now() - start;
+      time = performance.now();
+
+      document.getElementById("button").focus();
+      document.getElementById("CountLine").innerHTML = "Number of P's found: " + presses_intro;
+      
+      list = "practice" + list + "," + presses_intro + "," + time + "," + RT;
+      
+      document.getElementById("datatosend").value = start + list 
+
+    }
+  }
+     
+    </script>
+
+  </body>
+
+</html>
+
+
+

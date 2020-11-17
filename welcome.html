@@ -1,0 +1,123 @@
+
+
+<style media="screen" type="text/css"> 
+div { 
+   width: 50em; 
+   font-size:large; 
+   padding-left: 1em;
+   padding-right: 1em;
+   padding-bottom: -1em;
+   }
+   
+h1 {
+   margin-top:1em;
+   margin-bottom:.5em;
+   text-align: center;
+   }
+   
+p { 
+   font-size: large;
+   text-align: justify; 
+   font-family: "Times New Roman", Times, serif;
+
+   }
+  
+body {
+    color: white;
+    background-color: black;
+    margin-left: .5em;
+    margin-right: .5em;
+    margin-top: .5em;
+    font-size: 15pt;
+}
+
+   
+</style>
+
+
+<html>
+
+<html>
+  
+<div id="WelcomeScreen" name="WelcomeScreen" style="margin: 0 auto; text-align: justify; border:1px solid white; background-color:black"; width:50%>
+<center>
+  <h1> Welcome! </h1>
+  <i> Thank you for participating in this study! </i>
+</center>
+<br>
+<hr><br>
+<p>In this study, you will be listening to someone read a children's story! The story is roughly 30 minutes long. Your task is to hit the Space bar whenever you hear a letter "P" sound.</p>
+<p>You will start by listening to the introduction of the story to practice. There are <b>2</b> instances of the sound "P" in this practice introduction. See if you can get them all!</p>
+<br>
+ 
+<hr>
+
+<b><u><p style="margin-bottom:.4em;">Some tips and reminders:</p></u></b>
+<ul>
+  <li>Respond as quickly as you can. It helps to <b>rest your thumbs on the Space bar</b> in anticipation.</li>
+  <li>You will not be able to pause the story after starting! So please give yourself 30-40 minutes of uninterrupted time!</li>
+  <li>Make sure to pay attention to the story too. There may be comprehension questions about the content of the story.</li>
+  <li>At the end of the audio, just <u>type the last word that you heard</u> in order to continue with the study.</li>
+
+</ul>
+<br>
+
+<hr>
+<b><u><p style="margin-bottom:.4em;">Comprehension Check:</p></u></b>
+
+<font>
+  1. <i>What is your task?</i><br>
+  <td>
+    <input name="question1r" type="radio" value="left" class="obligatory" id="q1left" /><label for="q1left"> Push Space whenever I hear a "P" sound</label><br>
+    <input name="question1r" type="radio" value="right" id="q1right"/><label for="q1right"> Push Space whenever I hear a "P" sound and pay attention to the story!</label>
+  </td>
+<br><br>
+  
+  2. <i>What do you do at the end of the audio?</i><br>
+  <td>
+    <input name="question2l" type="radio" value="left" class="obligatory" id="q2left" /><label for="q2left"> Type the last word of the audio into the box</label><br>
+    <input name="question2l" type="radio" value="right" class= id="q2right"/><label for="q2right"> Exit the browser window before typing the last word of the audio into the box</label>
+  </td>
+<br><br>
+  
+  3. <i>How many times will I hear a "P" sound in the practice introduction audio?</i><br>
+  <td>
+    <input name="question3r" type="radio" value="left" class="obligatory" id="q3left" /><label for="q3left"> 4!</label><br>
+    <input name="question3r" type="radio" value="right" class= id="q3right"/><label for="q3right"> 2!</label>
+  </td>
+<br><br>
+  
+    4. <i>Is your screen in Full screen mode?</i><br>
+  <td>
+    <input name="question4l" type="radio" value="left" class="obligatory" id="q4left" /><label for="q4left"> Yes!</label><br>
+    <input name="question4l" type="radio" value="right" class= id="q4right"/><label for="q4right"> No!</label>
+  </td>
+<br><br>
+  
+    5. <i>Is your volume turned up sufficiently? (We recommend using headphones/ear buds, if available)</i><br>
+  <td>
+    <input name="question5l" type="radio" value="left" class="obligatory" id="q5left" /><label for="q5left"> Yes!</label><br>
+    <input name="question5l" type="radio" value="right" class= id="q5right"/><label for="q5right"> No!</label>
+  </td>
+<br>
+</font>
+  
+  </tr>
+ <p>
+    <input type="text" style="width: 400px; height: 30px; color: red; font-size: 16; font-weight: bold; font-family: 'Times New Roman', Times, serif;" class="obligatory" class="obligatory" name="continue" onfocus="if(this.value == 'To continue, please type: Ready') { this.value = ''; }" value="To continue, please type: Ready"/>
+  </p>
+  <p> Then press Enter to continue!</p>
+  <br><br>
+  
+<td colspan="2">
+<label class="error" for="intro"></label>
+</td>
+</tr>
+
+
+</div>
+
+<br><br>
+  
+</html>
+
